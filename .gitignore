@@ -1,0 +1,6 @@
+node_modules
+functions/**/*.js
+functions/**/*.js.map
+functions/typings/
+functions/node_modules/
+functions/.env
