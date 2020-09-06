@@ -65,15 +65,10 @@ export const getHuizinTIme = (d: Date) => {
     (e) => pronounceNumber[+e]
   );
   const minute = d.getMinutes() + "";
-  const heizinMinute = [...minute].map((e, i) => {
-    if (+e <= 2) return pronounceNumber[+e];
-    const digit = ["", "십", "백"];
-    return pronounceNumber[+e] + digit[minute.length - i - 1];
-  });
   return {
-    textToSpeech: `현재시각. ${heizinHour.join(".")}시. ${heizinMinute.join(
+    textToSpeech: `현재시각. ${heizinHour.join(
       "."
-    )}분입니다. 리잠자지 마시고오. 등교준비하시길 바랍니다.`,
+    )}시. ${d.getMinutes()}분입니다. 리잠자지 마시고오. 등교준비하시길 바랍니다.`,
     displayText: `현재시각 ${d.getHours()}시 ${d.getMinutes()}분입니다. 리잠자지 마시고 등교준비하시길 바랍니다.`,
   };
 };
