@@ -64,7 +64,6 @@ export const getHuizinTIme = (d: Date) => {
   const heizinHour = [...(d.getHours() + "").padStart(2, "0")].map(
     (e) => pronounceNumber[+e]
   );
-  const minute = d.getMinutes() + "";
   return {
     textToSpeech: `현재시각. ${heizinHour.join(
       "."
