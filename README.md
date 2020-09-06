@@ -22,6 +22,9 @@
   - fron-backend: Dialogflow connected with Fulfullment
 
 # WIP
-- []: make lighter backend
-- []: for 우정학사
-- []: Direct-Recorded 사감쌤 Voice
+- [ ] make lighter backend
+- [ ] for 우정학사
+- [ ] Direct-Recorded 사감쌤 Voice
+
+# Caution
+모든 음원 데이터는 유튜브에서 파싱해옵니다. 이 앱은 사용자의 개인정보를 보관하지 않습니다. 
