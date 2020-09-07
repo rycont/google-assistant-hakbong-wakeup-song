@@ -5,7 +5,9 @@ import { APP_NAME } from "../constants";
 
 const getTodayAudio = async (req: Request, res: Response) => {
   console.log("loading audio");
-  const d = new Date();
+  let d = new Date();
+  d = new Date(+d + (540 - d.getTimezoneOffset()) * 60000);
+  console.log(d);
   const filename = `${d.getMonth() + 1}${d.getDate()}.mp3`;
   if (!(await bucket.file(filename).exists())[0])
     await downloadTodayMp3(d, filename);
